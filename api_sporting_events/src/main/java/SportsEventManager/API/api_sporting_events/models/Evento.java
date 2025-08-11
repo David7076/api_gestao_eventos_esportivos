@@ -28,10 +28,12 @@ public class Evento {
     @Column(nullable = false)
     private String modalidade;
 
-
+    @Column(nullable = false)
     private LocalDateTime data;
 
+    @Column(nullable = false)
     private String local;
+
 
     private Integer vagasDisponiveis;
 
