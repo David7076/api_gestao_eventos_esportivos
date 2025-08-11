@@ -14,10 +14,16 @@ import lombok.*;
 public class Atleta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_atleta")
     private Long id;
 
+
+    @Column(nullable = false)
     private String nome;
+
+    @Column(nullable = false)
     private Integer idade;
+
     private String modalidade;
 
     private Integer ranking;
