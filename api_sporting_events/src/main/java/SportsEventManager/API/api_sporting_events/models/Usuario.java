@@ -27,5 +27,5 @@ public class Usuario {
 
     @NotNull
     @Column(name = "password", nullable = false, length = 100)
-    private String password;
+    private String senha;
 }
