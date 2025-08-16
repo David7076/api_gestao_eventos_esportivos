@@ -6,7 +6,7 @@ import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
 
 @Entity(name = "Usuario")
-@Table(name = "tb_usuario")
+@Table(name = "tbUsuario")
 @Getter
 @Setter
 @AllArgsConstructor
