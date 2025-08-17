@@ -6,7 +6,7 @@ import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
 
 @Entity(name = "Usuario")
-@Table(name = "tb_usuario")
+@Table(name = "tbUsuario")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -27,5 +27,5 @@ public class Usuario {
 
     @NotNull
     @Column(name = "password", nullable = false, length = 100)
-    private String password;
+    private String senha;
 }
