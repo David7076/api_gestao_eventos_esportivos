@@ -1,39 +1,21 @@
 package SportsEventManager.API.api_sporting_events.models;
 
+
 import SportsEventManager.API.api_sporting_events.dtos.AtletaCadastroDTO;
-import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
 
-@Entity(name = "Atleta")
-@Table(name = "tbAtleta")
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
-@EqualsAndHashCode(of = "id")
+@Data
 public class Atleta {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_atleta")
     private Long id;
-
-
-    @Column(nullable = false, length = 30)
     private String nome;
-
-    @Column(nullable = false)
     private Integer idade;
-
-    @Column(nullable = false)
     private String modalidade;
-
     private Integer ranking;
 
-    public Atleta(AtletaCadastroDTO atletaDTO) {
-        this.nome = atletaDTO.nome();
-        this.idade = atletaDTO.idade();
-        this.modalidade = atletaDTO.modalidade();
-        this.ranking = atletaDTO.ranking();
+    public Atleta(AtletaCadastroDTO dto) {
+        this.nome = dto.nome();
+        this.idade = dto.idade();
+        this.modalidade = dto.modalidade();
+        this.ranking = dto.ranking();
     }
 }
