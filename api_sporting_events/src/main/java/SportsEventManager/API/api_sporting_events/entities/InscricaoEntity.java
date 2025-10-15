@@ -28,7 +28,7 @@ public class InscricaoEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "atleta_id", nullable = false)
-    private Atleta atleta;
+    private AtletaEntity atleta;
 
     @CreationTimestamp
     private LocalDateTime data;

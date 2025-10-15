@@ -1,12 +1,12 @@
 package SportsEventManager.API.api_sporting_events.entities;
 
-import SportsEventManager.API.api_sporting_events.dtos.AtletaCadastroDTO;
+
 import SportsEventManager.API.api_sporting_events.models.Atleta;
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity(name = "Atleta")
-@Table(name = "tbAtleta")
+@Table(name = "tbatleta")
 @Getter
 @Setter
 @AllArgsConstructor
