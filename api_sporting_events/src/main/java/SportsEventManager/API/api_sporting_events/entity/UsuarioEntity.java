@@ -1,4 +1,4 @@
-package SportsEventManager.API.api_sporting_events.entities;
+package SportsEventManager.API.api_sporting_events.entity;
 
 
 import jakarta.persistence.*;
