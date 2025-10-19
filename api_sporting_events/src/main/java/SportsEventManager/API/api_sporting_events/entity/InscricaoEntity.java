@@ -1,6 +1,5 @@
-package SportsEventManager.API.api_sporting_events.entities;
+package SportsEventManager.API.api_sporting_events.entity;
 
-import SportsEventManager.API.api_sporting_events.models.Atleta;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -28,7 +27,7 @@ public class InscricaoEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "atleta_id", nullable = false)
-    private AtletaEntity atleta;
+    private AthleteEntity atleta;
 
     @CreationTimestamp
     private LocalDateTime data;
