@@ -1,4 +1,4 @@
-package SportsEventManager.API.api_sporting_events.models;
+package SportsEventManager.API.api_sporting_events.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @ToString
 @EqualsAndHashCode(of = "id")
-public class Inscricao {
+public class InscricaoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,11 +23,11 @@ public class Inscricao {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "evento_id", nullable = false)
-    private Evento evento;
+    private EventoEntity evento;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "atleta_id", nullable = false)
-    private Atleta atleta;
+    private AthleteEntity atleta;
 
     @CreationTimestamp
     private LocalDateTime data;

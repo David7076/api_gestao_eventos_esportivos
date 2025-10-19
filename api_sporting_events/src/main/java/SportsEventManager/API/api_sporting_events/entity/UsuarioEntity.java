@@ -1,4 +1,4 @@
-package SportsEventManager.API.api_sporting_events.models;
+package SportsEventManager.API.api_sporting_events.entity;
 
 
 import jakarta.persistence.*;
@@ -13,7 +13,7 @@ import org.antlr.v4.runtime.misc.NotNull;
 @NoArgsConstructor
 @ToString
 @EqualsAndHashCode(of = "id")
-public class Usuario {
+public class UsuarioEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
