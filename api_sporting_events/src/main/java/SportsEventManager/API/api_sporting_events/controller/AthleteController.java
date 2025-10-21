@@ -8,6 +8,8 @@ import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -38,5 +40,16 @@ public class AthleteController {
     }
 
 
-//    public ResponseEntity updateAthlete(@RequestBody @Valid RequestUpdateAthleteDTO dto)
+    @PutMapping("/updateAthlete")
+    @Transactional
+    public ResponseEntity<ResponseAthleteDTO> updateAthlete(@RequestBody @Valid RequestUpdateAthleteDTO dto) {
+        ResponseAthleteDTO response = service.update(dto);
+        return ResponseEntity.ok(response);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteAthlete(@PathVariable Long id) {
+        service.delete(id);
+        return ResponseEntity.noContent().build();
+    }
 }
